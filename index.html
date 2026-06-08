@@ -1,122 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>José Guilherme | Portfólio Cyberpunk</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Guilherme | Portfólio </title>
+    <!-- Importando fontes futuristas e de programação -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            background: #050816;
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace; /* Fonte estilo linha de código */
+            line-height: 1.7;
+        }
 
-body{
-    background:#050816;
-    color:#ffffff;
-    font-family:'Segoe UI',sans-serif;
-    line-height:1.7;
-}
+        /* Barra superior neon */
+        .topbar {
+            background: #00e5ff;
+            height: 6px;
+            box-shadow: 0 0 20px #00e5ff;
+        }
 
-/* Barra superior */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
 
-.topbar{
-    background:#00e5ff;
-    height:6px;
-    box-shadow:0 0 20px #00e5ff;
-}
+        /* Perfil - Estilo Terminal Cyberpunk */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px;
+            border: 2px solid #00e5ff;
+            background: #0b1022;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px;
-}
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif; /* Fonte futurista para o nome */
+            font-size: 4rem;
+            color: #00e5ff;
+            text-shadow: 0 0 15px #00e5ff;
+            letter-spacing: 2px;
+        }
 
-/* Perfil */
+        .hero p {
+            color: #ffd600;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(255, 214, 0, 0.5);
+            margin-top: 10px;
+        }
 
-.hero{
-    text-align:center;
-    margin-bottom:40px;
-    padding:40px;
-    border:2px solid #00e5ff;
-    background:#0b1022;
-    box-shadow:0 0 25px rgba(0,229,255,.25);
-}
+        /* Cards */
+        .card {
+            background: #0f172a;
+            border-left: 5px solid #ffd600;
+            border-right: 1px solid rgba(0, 229, 255, 0.1);
+            border-top: 1px solid rgba(0, 229, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
 
-.hero h1{
-    font-size:4rem;
-    color:#00e5ff;
-    text-shadow:0 0 20px #00e5ff;
-}
+        .card:hover {
+            transform: translateX(8px);
+            border-left-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+        }
 
-.hero p{
-    color:#ffd600;
-    font-weight:bold;
-    font-size:1.2rem;
-}
+        .card h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00e5ff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
 
-/* Cards */
+        .card ul {
+            padding-left: 20px;
+            list-style-type: "⚡ "; /* Marcador personalizado cyberpunk */
+        }
 
-.card{
-    background:#0f172a;
-    border-left:5px solid #ffd600;
-    padding:25px;
-    margin-bottom:20px;
-    transition:0.3s;
-}
+        .card li {
+            margin-bottom: 8px;
+        }
 
-.card:hover{
-    transform:translateX(8px);
-    box-shadow:0 0 20px rgba(255,214,0,.25);
-}
+        /* Grid de informações */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 
-.card h2{
-    color:#00e5ff;
-    margin-bottom:15px;
-    text-transform:uppercase;
-}
+        /* Links / Contatos */
+        .social-links a {
+            color: #ffd600;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px dashed #ffd600;
+            transition: 0.2s;
+        }
 
-.card ul{
-    padding-left:20px;
-}
+        .social-links a:hover {
+            color: #00e5ff;
+            border-bottom-color: #00e5ff;
+        }
 
-.card li{
-    margin-bottom:8px;
-}
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #8fa6b8;
+            border-top: 1px solid #1f2937;
+            font-size: 0.9rem;
+        }
 
-/* Grid */
+        /* Responsividade */
+        @media(max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-/* Rodapé */
-
-footer{
-    text-align:center;
-    margin-top:40px;
-    padding:20px;
-    color:#8fa6b8;
-    border-top:1px solid #1f2937;
-}
-
-@media(max-width:768px){
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-}
-
-</style>
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .card:hover {
+                transform: none; /* Evita comportamento estranho no touch do celular */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -124,78 +153,70 @@ footer{
 
 <div class="container">
 
-    <section class="hero">
+    <header class="hero">
         <h1>JOSÉ GUILHERME</h1>
         <p>PROGRAMAÇÃO DE JOGOS DIGITAIS • MEDIOTEC SENAC</p>
-    </section>
+    </header>
 
-    <section class="card">
-        <h2>Perfil</h2>
+    <main>
+        <section class="card">
+            <h2>[01] Perfil</h2>
+            <p>
+                Sou estudante do Mediotec Senac, tenho 15 anos e moro em Recife.
+                Tenho interesse em tecnologia, programação, desenvolvimento de jogos
+                e artes visuais. Meu objetivo é evoluir constantemente como desenvolvedor
+                e criar projetos inovadores para o mundo digital.
+            </p>
+        </section>
 
-        <p>
-            Sou estudante do Mediotec Senac, tenho 15 anos e moro em Recife.
-            Tenho interesse em tecnologia, programação, desenvolvimento de jogos
-            e artes visuais. Meu objetivo é evoluir constantemente como desenvolvedor
-            e criar projetos inovadores para o mundo digital.
-        </p>
-    </section>
+        <div class="grid">
+            <section class="card">
+                <h2>[02] Habilidades</h2>
+                <ul>
+                    <li>HTML5 / CSS3</li>
+                    <li>Lógica de Programação</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </section>
 
-    <div class="grid">
+            <section class="card">
+                <h2>[03] Interesses</h2>
+                <ul>
+                    <li>Desenvolvimento de Jogos</li>
+                    <li>Artes Visuais</li>
+                    <li>Programação Engine (Unity/Unreal)</li>
+                    <li>Tecnologia Computacional</li>
+                </ul>
+            </section>
+        </div>
 
         <section class="card">
-            <h2>Habilidades</h2>
-
+            <h2>[04] Jogos Favoritos</h2>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Lógica de Programação</li>
-                <li>GitHub</li>
+                <li>Fortnite</li>
+                <li>Gran Turismo 7</li>
+                <li>F1 25</li>
+                <li>Ghost Recon Breakpoint</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2>Interesses</h2>
-
-            <ul>
-                <li>Desenvolvimento de Jogos</li>
-                <li>Artes Visuais</li>
-                <li>Programação</li>
-                <li>Tecnologia</li>
-            </ul>
+            <h2>[05] Projeto ODS</h2>
+            <p>
+                Atualmente participo de um projeto relacionado aos Objetivos de
+                Desenvolvimento Sustentável (ODS), desenvolvendo um jogo com foco
+                em sustentabilidade e conscientização ambiental.
+            </p>
         </section>
 
-    </div>
-
-    <section class="card">
-        <h2>Jogos Favoritos</h2>
-
-        <ul>
-            <li>Fortnite</li>
-            <li>Gran Turismo 7</li>
-            <li>F1 25</li>
-            <li>Ghost Recon Breakpoint</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>Objetivos Profissionais</h2>
-
-        <p>
-            Busco adquirir conhecimentos em programação, criação de jogos,
-            design digital e desenvolvimento de software para construir uma
-            carreira sólida na área de tecnologia.
-        </p>
-    </section>
-
-    <section class="card">
-        <h2>Projeto ODS</h2>
-
-        <p>
-            Atualmente participo de um projeto relacionado aos Objetivos de
-            Desenvolvimento Sustentável (ODS), desenvolvendo um jogo com foco
-            em sustentabilidade e conscientização ambiental.
-        </p>
-    </section>
+        <section class="card">
+            <h2>[06] Conectar_</h2>
+            <p class="social-links">
+                Pronto para iniciar uma nova build? Desenvolvendo em Recife/PE. <br>
+                Acesse meu <a href="https://github.com/" target="_blank">GitHub</a> ou envie um sinal.
+            </p>
+        </section>
+    </main>
 
     <footer>
         © 2026 • José Guilherme • Portfólio de Programação de Jogos Digitais
@@ -205,4 +226,3 @@ footer{
 
 </body>
 </html>
-```
