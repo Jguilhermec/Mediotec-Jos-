@@ -1,165 +1,181 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - José Guilherme</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - José Guilherme</title>
 
-    <style>
-        :root{
-            --bg:#f4f6f8;
-            --card:#ffffff;
-            --primary:#2c3e50;
-            --secondary:#5d6d7e;
-            --border:#d6dce5;
-            --text:#1f2937;
-        }
+<style>
+:root{
+    --bg:#0a0f1f;
+    --card:#111827;
+    --primary:#00e5ff;
+    --secondary:#b0bec5;
+    --border:#1f2937;
+    --text:#f5f5f5;
+    --accent:#ffd300;
+}
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body{
-            font-family:'Segoe UI', Arial, sans-serif;
-            background:var(--bg);
-            color:var(--text);
-            line-height:1.6;
-        }
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(135deg,#0a0f1f,#111827);
+    color:var(--text);
+    line-height:1.6;
+}
 
-        .container{
-            max-width:1000px;
-            margin:auto;
-            padding:40px 20px;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-        header{
-            text-align:center;
-            margin-bottom:40px;
-        }
+header{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-        header h1{
-            font-size:3rem;
-            color:var(--primary);
-            margin-bottom:10px;
-        }
+header h1{
+    font-size:3rem;
+    color:var(--primary);
+    margin-bottom:10px;
+    text-shadow:0 0 15px rgba(0,229,255,0.6);
+}
 
-        header p{
-            color:var(--secondary);
-            font-size:1.1rem;
-        }
+header p{
+    color:var(--accent);
+    font-size:1.1rem;
+    font-weight:bold;
+}
 
-        .card{
-            background:var(--card);
-            border:1px solid var(--border);
-            border-radius:12px;
-            padding:25px;
-            margin-bottom:20px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.05);
-            transition:0.3s;
-        }
+.card{
+    background:rgba(17,24,39,0.95);
+    border:1px solid var(--primary);
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 0 15px rgba(0,229,255,0.15);
+    transition:0.3s;
+}
 
-        .card:hover{
-            transform:translateY(-5px);
-        }
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(255,211,0,0.3);
+}
 
-        .card h2{
-            color:var(--primary);
-            margin-bottom:15px;
-            border-bottom:2px solid var(--border);
-            padding-bottom:8px;
-        }
+.card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:8px;
+}
 
-        .card ul{
-            padding-left:20px;
-        }
+.card ul{
+    padding-left:20px;
+}
 
-        .card li{
-            margin-bottom:8px;
-        }
+.card li{
+    margin-bottom:8px;
+}
 
-        footer{
-            text-align:center;
-            margin-top:30px;
-            color:var(--secondary);
-            padding:20px;
-        }
+footer{
+    text-align:center;
+    margin-top:30px;
+    color:var(--secondary);
+    padding:20px;
+    border-top:1px solid var(--primary);
+}
 
-        @media(max-width:768px){
-            header h1{
-                font-size:2.2rem;
-            }
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
 
-            .container{
-                padding:20px;
-            }
-        }
-    </style>
+    .container{
+        padding:20px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <header>
-            <h1>José Guilherme</h1>
-            <p>Estudante de Desenvolvimento de Sistemas | Mediotec Senac</p>
-        </header>
+    <header>
+        <h1>José Guilherme</h1>
+        <p>Estudante de Programação de Jogos Digitais | Mediotec Senac</p>
+    </header>
 
-        <section class="card">
-            <h2>Sobre Mim</h2>
-            <p>
-                Sou estudante do 1º ano do Ensino Médio no Mediotec Senac.
-                Tenho 15 anos e moro em Recife - Pernambuco.
-                Tenho interesse em programação, tecnologia,
-                desenvolvimento de jogos e artes visuais.
-            </p>
-        </section>
+    <section class="card">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou estudante do 1º ano do Ensino Médio no Mediotec Senac.
+            Tenho 15 anos e moro em Recife - Pernambuco.
+            Tenho grande interesse por tecnologia, programação,
+            desenvolvimento de jogos e artes visuais.
+        </p>
+    </section>
 
-        <section class="card">
-            <h2>Interesses</h2>
-            <ul>
-                <li>Programação</li>
-                <li>Desenvolvimento de Jogos</li>
-                <li>Artes Visuais</li>
-                <li>Tecnologia</li>
-            </ul>
-        </section>
+    <section class="card">
+        <h2>Curso</h2>
+        <p>
+            Atualmente curso Programação de Jogos Digitais,
+            desenvolvendo conhecimentos em lógica de programação,
+            criação de jogos, design digital e desenvolvimento de projetos.
+        </p>
+    </section>
 
-        <section class="card">
-            <h2>Jogos Favoritos</h2>
-            <ul>
-                <li>Fortnite</li>
-                <li>Gran Turismo 7</li>
-                <li>F1 25</li>
-                <li>Ghost Recon Breakpoint</li>
-            </ul>
-        </section>
+    <section class="card">
+        <h2>Interesses</h2>
+        <ul>
+            <li>Programação</li>
+            <li>Desenvolvimento de Jogos</li>
+            <li>Artes Visuais</li>
+            <li>Tecnologia</li>
+        </ul>
+    </section>
 
-        <section class="card">
-            <h2>Objetivos</h2>
-            <p>
-                Pretendo aprender cada vez mais sobre programação,
-                desenvolvimento de software e criação de projetos digitais,
-                buscando uma carreira na área de tecnologia.
-            </p>
-        </section>
+    <section class="card">
+        <h2>Jogos Favoritos</h2>
+        <ul>
+            <li>Fortnite</li>
+            <li>Gran Turismo 7</li>
+            <li>F1 25</li>
+            <li>Ghost Recon Breakpoint</li>
+        </ul>
+    </section>
 
-        <section class="card">
-            <h2>Projeto Atual</h2>
-            <p>
-                Atualmente participo de um projeto relacionado aos
-                Objetivos de Desenvolvimento Sustentável (ODS),
-                desenvolvendo um jogo com foco em sustentabilidade
-                e conscientização ambiental.
-            </p>
-        </section>
+    <section class="card">
+        <h2>Objetivos</h2>
+        <p>
+            Pretendo aprender cada vez mais sobre programação,
+            desenvolvimento de software, modelagem de jogos e criação
+            de projetos digitais, buscando uma carreira na área de tecnologia.
+        </p>
+    </section>
 
-        <footer>
-            © 2026 - Portfólio de José Guilherme
-        </footer>
+    <section class="card">
+        <h2>Projeto Atual</h2>
+        <p>
+            Atualmente participo de um projeto relacionado aos
+            Objetivos de Desenvolvimento Sustentável (ODS),
+            desenvolvendo um jogo com foco em sustentabilidade
+            e conscientização ambiental.
+        </p>
+    </section>
 
-    </div>
+    <footer>
+        © 2026 • Portfólio de José Guilherme
+    </footer>
+
+</div>
 
 </body>
 </html>
+```
