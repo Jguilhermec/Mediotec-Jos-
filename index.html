@@ -1,0 +1,149 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - José Guilherme</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>José Guilherme</h1>
+        <p>Estudante de Desenvolvimento de Sistemas | Mediotec Senac</p>
+    </header>
+
+    <section class="card">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou estudante do 1º ano do Ensino Médio no Mediotec Senac.
+            Tenho 15 anos e moro em Recife - PE.
+            Tenho interesse em programação, tecnologia,
+            desenvolvimento de jogos e artes visuais.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Interesses</h2>
+        <ul>
+            <li>Programação</li>
+            <li>Desenvolvimento de Jogos</li>
+            <li>Artes Visuais</li>
+            <li>Tecnologia</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Jogos Favoritos</h2>
+        <ul>
+            <li>Fortnite</li>
+            <li>Gran Turismo 7</li>
+            <li>F1 25</li>
+            <li>Ghost Recon Breakpoint</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Objetivos</h2>
+        <p>
+            Pretendo aprender cada vez mais sobre programação e
+            desenvolvimento de software para atuar futuramente
+            na área de tecnologia.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Projeto Atual</h2>
+        <p>
+            Estou participando de um projeto relacionado aos
+            Objetivos de Desenvolvimento Sustentável (ODS),
+            desenvolvendo um jogo com foco em sustentabilidade.
+        </p>
+    </section>
+
+</div>
+
+</body>
+</html>
+```
+```css
+:root{
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --primary:#2c3e50;
+    --secondary:#5d6d7e;
+    --border:#d6dce5;
+    --text:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+header h1{
+    font-size:3rem;
+    color:var(--primary);
+}
+
+header p{
+    color:var(--secondary);
+    margin-top:10px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
+}
+```
