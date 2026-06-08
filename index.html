@@ -3,18 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio - José Guilherme</title>
+<title>José Guilherme | Portfólio Cyberpunk</title>
 
 <style>
-:root{
-    --bg:#0a0f1f;
-    --card:#111827;
-    --primary:#00e5ff;
-    --secondary:#b0bec5;
-    --border:#1f2937;
-    --text:#f5f5f5;
-    --accent:#ffd300;
-}
 
 *{
     margin:0;
@@ -23,56 +14,68 @@
 }
 
 body{
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:linear-gradient(135deg,#0a0f1f,#111827);
-    color:var(--text);
-    line-height:1.6;
+    background:#050816;
+    color:#ffffff;
+    font-family:'Segoe UI',sans-serif;
+    line-height:1.7;
+}
+
+/* Barra superior */
+
+.topbar{
+    background:#00e5ff;
+    height:6px;
+    box-shadow:0 0 20px #00e5ff;
 }
 
 .container{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
-    padding:40px 20px;
+    padding:30px;
 }
 
-header{
+/* Perfil */
+
+.hero{
     text-align:center;
     margin-bottom:40px;
+    padding:40px;
+    border:2px solid #00e5ff;
+    background:#0b1022;
+    box-shadow:0 0 25px rgba(0,229,255,.25);
 }
 
-header h1{
-    font-size:3rem;
-    color:var(--primary);
-    margin-bottom:10px;
-    text-shadow:0 0 15px rgba(0,229,255,0.6);
+.hero h1{
+    font-size:4rem;
+    color:#00e5ff;
+    text-shadow:0 0 20px #00e5ff;
 }
 
-header p{
-    color:var(--accent);
-    font-size:1.1rem;
+.hero p{
+    color:#ffd600;
     font-weight:bold;
+    font-size:1.2rem;
 }
+
+/* Cards */
 
 .card{
-    background:rgba(17,24,39,0.95);
-    border:1px solid var(--primary);
-    border-radius:12px;
+    background:#0f172a;
+    border-left:5px solid #ffd600;
     padding:25px;
     margin-bottom:20px;
-    box-shadow:0 0 15px rgba(0,229,255,0.15);
-    transition:all 0.3s ease;
+    transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 25px rgba(255,211,0,0.3);
+    transform:translateX(8px);
+    box-shadow:0 0 20px rgba(255,214,0,.25);
 }
 
 .card h2{
-    color:var(--primary);
+    color:#00e5ff;
     margin-bottom:15px;
-    border-bottom:2px solid var(--accent);
-    padding-bottom:8px;
+    text-transform:uppercase;
 }
 
 .card ul{
@@ -83,65 +86,89 @@ header p{
     margin-bottom:8px;
 }
 
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+/* Rodapé */
+
 footer{
     text-align:center;
-    margin-top:30px;
-    color:var(--secondary);
+    margin-top:40px;
     padding:20px;
-    border-top:1px solid var(--primary);
+    color:#8fa6b8;
+    border-top:1px solid #1f2937;
 }
 
 @media(max-width:768px){
-    header h1{
-        font-size:2.2rem;
+
+    .grid{
+        grid-template-columns:1fr;
     }
 
-    .container{
-        padding:20px;
+    .hero h1{
+        font-size:2.5rem;
     }
+
 }
+
 </style>
 </head>
 <body>
 
+<div class="topbar"></div>
+
 <div class="container">
 
-    <header>
-        <h1>José Guilherme</h1>
-        <p>Estudante de Programação de Jogos Digitais | Mediotec Senac</p>
-    </header>
+    <section class="hero">
+        <h1>JOSÉ GUILHERME</h1>
+        <p>PROGRAMAÇÃO DE JOGOS DIGITAIS • MEDIOTEC SENAC</p>
+    </section>
 
     <section class="card">
-        <h2>Sobre Mim</h2>
+        <h2>Perfil</h2>
+
         <p>
-            Sou estudante do 1º ano do Ensino Médio no Mediotec Senac.
-            Tenho 15 anos e moro em Recife - Pernambuco.
-            Tenho grande interesse por tecnologia, programação,
-            desenvolvimento de jogos e artes visuais.
+            Sou estudante do Mediotec Senac, tenho 15 anos e moro em Recife.
+            Tenho interesse em tecnologia, programação, desenvolvimento de jogos
+            e artes visuais. Meu objetivo é evoluir constantemente como desenvolvedor
+            e criar projetos inovadores para o mundo digital.
         </p>
     </section>
 
-    <section class="card">
-        <h2>Curso</h2>
-        <p>
-            Atualmente curso Programação de Jogos Digitais,
-            desenvolvendo conhecimentos em lógica de programação,
-            criação de jogos, design digital e desenvolvimento de projetos.
-        </p>
-    </section>
+    <div class="grid">
 
-    <section class="card">
-        <h2>Interesses</h2>
-        <ul>
-            <li>Programação</li>
-            <li>Desenvolvimento de Jogos</li>
-            <li>Artes Visuais</li>
-            <li>Tecnologia</li>
-        </ul>
-    </section>
+        <section class="card">
+            <h2>Habilidades</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Lógica de Programação</li>
+                <li>GitHub</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Interesses</h2>
+
+            <ul>
+                <li>Desenvolvimento de Jogos</li>
+                <li>Artes Visuais</li>
+                <li>Programação</li>
+                <li>Tecnologia</li>
+            </ul>
+        </section>
+
+    </div>
 
     <section class="card">
         <h2>Jogos Favoritos</h2>
+
         <ul>
             <li>Fortnite</li>
             <li>Gran Turismo 7</li>
@@ -151,26 +178,27 @@ footer{
     </section>
 
     <section class="card">
-        <h2>Objetivos</h2>
+        <h2>Objetivos Profissionais</h2>
+
         <p>
-            Pretendo aprender cada vez mais sobre programação,
-            desenvolvimento de software, modelagem de jogos e criação
-            de projetos digitais, buscando uma carreira na área de tecnologia.
+            Busco adquirir conhecimentos em programação, criação de jogos,
+            design digital e desenvolvimento de software para construir uma
+            carreira sólida na área de tecnologia.
         </p>
     </section>
 
     <section class="card">
-        <h2>Projeto Atual</h2>
+        <h2>Projeto ODS</h2>
+
         <p>
-            Atualmente participo de um projeto relacionado aos
-            Objetivos de Desenvolvimento Sustentável (ODS),
-            desenvolvendo um jogo com foco em sustentabilidade
-            e conscientização ambiental.
+            Atualmente participo de um projeto relacionado aos Objetivos de
+            Desenvolvimento Sustentável (ODS), desenvolvendo um jogo com foco
+            em sustentabilidade e conscientização ambiental.
         </p>
     </section>
 
     <footer>
-        © 2026 • Portfólio de José Guilherme
+        © 2026 • José Guilherme • Portfólio de Programação de Jogos Digitais
     </footer>
 
 </div>
